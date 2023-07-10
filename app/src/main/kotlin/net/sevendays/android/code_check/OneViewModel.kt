@@ -1,7 +1,7 @@
 /*
  * Copyright © 2021 YUMEMI Inc. All rights reserved.
  */
-package jp.co.yumemi.android.code_check
+package net.sevendays.android.code_check
 
 import android.content.Context
 import android.os.Parcelable
@@ -11,7 +11,8 @@ import io.ktor.client.call.*
 import io.ktor.client.engine.android.*
 import io.ktor.client.request.*
 import io.ktor.client.statement.*
-import jp.co.yumemi.android.code_check.TopActivity.Companion.lastSearchDate
+import net.sevendays.android.code_check.R
+import net.sevendays.android.code_check.TopActivity.Companion.lastSearchDate
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.async
 import kotlinx.coroutines.runBlocking
@@ -20,13 +21,13 @@ import org.json.JSONObject
 import java.util.*
 
 /**
- * TwoFragment で使う
+ * Use with TwoFragment
  */
 class OneViewModel(
     val context: Context
 ) : ViewModel() {
 
-    // 検索結果
+    // Search results
     fun searchResults(inputText: String): List<item> = runBlocking {
         val client = HttpClient(Android)
 
@@ -43,7 +44,7 @@ class OneViewModel(
             val items = mutableListOf<item>()
 
             /**
-             * アイテムの個数分ループする
+             * Loop for the number of items
              */
             for (i in 0 until jsonItems.length()) {
                 val jsonItem = jsonItems.optJSONObject(i)!!

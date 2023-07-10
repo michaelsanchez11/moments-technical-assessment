@@ -7,11 +7,11 @@ plugins {
 }
 
 android {
-    namespace 'jp.co.yumemi.android.code_check'
+    namespace 'net.sevendays.android.code_check'
     compileSdk 31
 
     defaultConfig {
-        applicationId "jp.co.yumemi.android.codecheck"
+        applicationId "net.sevendays.android.codecheck"
         minSdk 23
         targetSdk 31
         versionCode 1

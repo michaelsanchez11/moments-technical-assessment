@@ -1,4 +1,4 @@
-package jp.co.yumemi.android.code_check
+package net.sevendays.android.code_check
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("jp.co.yumemi.android.codecheck", appContext.packageName)
+        assertEquals("net.sevendays.android.codecheck", appContext.packageName)
     }
 }

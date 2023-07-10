@@ -1,4 +1,4 @@
-package jp.co.yumemi.android.code_check
+package net.sevendays.android.code_check
 
 import org.junit.Test
 

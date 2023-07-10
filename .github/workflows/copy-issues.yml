@@ -4,7 +4,7 @@ on:
 
 jobs:
   get-issue-labels:
-    if: github.repository != 'yumemi-inc/android-engineer-codecheck'
+    if: github.repository != '7days/android-engineer-codecheck'
     runs-on: ubuntu-latest
     outputs:
       labels: ${{ steps.output_label_data.outputs.value }}
@@ -13,7 +13,7 @@ jobs:
         id: get_label_data
         uses: octokit/request-action@v2.1.7
         with:
-          route: GET /repos/yumemi-inc/android-engineer-codecheck/labels
+          route: GET /repos/7days/android-engineer-codecheck/labels
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - id: output_label_data
@@ -41,7 +41,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   get-milestones:
-    if: github.repository != 'yumemi-inc/android-engineer-codecheck'
+    if: github.repository != '7days/android-engineer-codecheck'
     runs-on: ubuntu-latest
     outputs:
       milestones: ${{ steps.output_milestones_data.outputs.value }}
@@ -50,7 +50,7 @@ jobs:
         id: get_milestones_data
         uses: octokit/request-action@v2.1.7
         with:
-          route: GET /repos/yumemi-inc/android-engineer-codecheck/milestones
+          route: GET /repos/7days/android-engineer-codecheck/milestones
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - id: output_milestones_data
@@ -96,7 +96,7 @@ jobs:
           result=$(echo '${{ steps.get_milestones_data.outputs.data }}' | sed -z 's/\n//g')
           echo "value=${result}" >> $GITHUB_OUTPUT
   get-issues:
-    if: github.repository != 'yumemi-inc/android-engineer-codecheck'
+    if: github.repository != '7days/android-engineer-codecheck'
     runs-on: ubuntu-latest
     outputs:
       issues: ${{ steps.output_issues_data.outputs.value }}
@@ -105,7 +105,7 @@ jobs:
         id: get_issues_data
         uses: octokit/request-action@v2.1.7
         with:
-          route: GET /repos/yumemi-inc/android-engineer-codecheck/issues
+          route: GET /repos/7days/android-engineer-codecheck/issues
           sort: created
           direction: asc
         env:
@@ -116,7 +116,7 @@ jobs:
           echo "value=${result}" >> $GITHUB_OUTPUT
 
   get-myrepo-issues:
-    if: github.repository != 'yumemi-inc/android-engineer-codecheck'
+    if: github.repository != '7days/android-engineer-codecheck'
     runs-on: ubuntu-latest
     permissions:
       issues: read

@@ -1,7 +1,7 @@
 /*
  * Copyright © 2021 YUMEMI Inc. All rights reserved.
  */
-package jp.co.yumemi.android.code_check
+package net.sevendays.android.code_check
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -12,7 +12,8 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.*
-import jp.co.yumemi.android.code_check.databinding.FragmentOneBinding
+import net.sevendays.android.code_check.R
+import net.sevendays.android.code_check.databinding.FragmentOneBinding
 
 class OneFragment: Fragment(R.layout.fragment_one){
 
@@ -27,7 +28,7 @@ class OneFragment: Fragment(R.layout.fragment_one){
         val _layoutManager= LinearLayoutManager(context!!)
         val _dividerItemDecoration=
             DividerItemDecoration(context!!, _layoutManager.orientation)
-        val _adapter= CustomAdapter(object : CustomAdapter.OnItemClickListener{
+        val _adapter= CustomAdapter(object : CustomAdapter.OnItemClickListener {
             override fun itemClick(item: item){
                 gotoRepositoryFragment(item)
             }
