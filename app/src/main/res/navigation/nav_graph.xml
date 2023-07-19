@@ -3,26 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/oneFragment">
+    app:startDestination="@id/githubRepositoryListFragment">
 
     <fragment
-        android:id="@+id/oneFragment"
-        android:name="net.sevendays.android.code_check.OneFragment"
-        android:label="@string/app_name"
-        tools:layout="@layout/fragment_one">
+        android:id="@+id/githubRepositoryListFragment"
+        android:name="net.sevendays.android.code_check.presentation.ui.github_repository_list.GithubRepositoryListFragment"
+        android:label="GithubRepositoryListFragment">
         <action
-            android:id="@+id/action_repositoriesFragment_to_repositoryFragment"
-            app:destination="@id/twoFragment" />
+            android:id="@+id/viewGithubRepository"
+            app:destination="@id/githubRepositoryFragment" />
     </fragment>
 
     <fragment
-        android:id="@+id/twoFragment"
-        android:name="net.sevendays.android.code_check.TwoFragment"
-        android:label="@string/app_name"
-        tools:layout="@layout/fragment_two">
-        <argument
-            android:name="item"
-            app:argType="net.sevendays.android.code_check.item" />
-    </fragment>
-
+        android:id="@+id/githubRepositoryFragment"
+        android:name="net.sevendays.android.code_check.presentation.ui.github_repository.GithubRepositoryFragment"
+        android:label="GithubRepositoryFragment" />
 </navigation>

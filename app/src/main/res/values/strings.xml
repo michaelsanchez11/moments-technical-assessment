@@ -2,4 +2,8 @@
     <string name="app_name">Android Engineer CodeCheck</string>
     <string name="searchInputText_hint">Search GitHub repositories</string>
     <string name="written_language">Written in %s</string>
+    <string name="star_count">Star count: %s</string>
+    <string name="fork_count">Fork count: %s</string>
+    <string name="open_issues">Open issues: %s</string>
+    <string name="watchers_count">Watchers: %s</string>
 </resources>
