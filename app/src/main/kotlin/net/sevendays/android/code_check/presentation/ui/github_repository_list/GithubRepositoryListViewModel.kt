@@ -10,6 +10,11 @@ import net.sevendays.android.code_check.domain.model.GithubRepository
 import net.sevendays.android.code_check.repository.GithubRepositoryRepo
 import javax.inject.Inject
 
+/**
+ * Viewmodel for the GithubRepositoryListFragment, it holds the state for the
+ * query search and launches the api call via coroutine.
+ */
+
 @HiltViewModel
 class GithubRepositoryListViewModel
 @Inject

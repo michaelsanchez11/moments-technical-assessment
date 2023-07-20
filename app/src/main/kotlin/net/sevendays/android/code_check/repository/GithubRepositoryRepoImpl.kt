@@ -6,6 +6,10 @@ import net.sevendays.android.code_check.network.GithubRepositoryService
 import net.sevendays.android.code_check.network.model.GithubRepositoryDtoMapper
 import retrofit2.HttpException
 
+/**
+ * Implementing the api call and handling for when there is an error on the api call.
+ */
+
 class GithubRepositoryRepoImpl(
     private val githubRepositoryService: GithubRepositoryService,
     private val mapper: GithubRepositoryDtoMapper
@@ -17,7 +21,7 @@ class GithubRepositoryRepoImpl(
             return mapper.toDomainList(result)
         } catch (e: HttpException) {
             val errorBody = e.response()?.errorBody()?.string()
-            Log.d("Error in Search", errorBody.toString())
+            Log.d("Error in Search: ", errorBody.toString())
         }
         return emptyList()
     }

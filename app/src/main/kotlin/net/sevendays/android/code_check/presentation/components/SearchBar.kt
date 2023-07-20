@@ -23,6 +23,10 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import net.sevendays.android.code_check.presentation.ui.github_repository_list.GithubRepositoryListViewModel
 
+/**
+ * Composable displaying the Search bar in the GithubRepositoryListFragment.
+ */
+
 @OptIn(ExperimentalComposeUiApi::class)
 @Composable
 fun SearchBar(viewModel: GithubRepositoryListViewModel) {

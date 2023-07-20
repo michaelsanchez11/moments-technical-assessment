@@ -4,6 +4,9 @@ import net.sevendays.android.code_check.domain.model.GithubRepository
 import net.sevendays.android.code_check.domain.model.OwnerIconUrl
 import net.sevendays.android.code_check.domain.util.DomainMapper
 
+/**
+ * GithubRepository mapping from a Dto Model Object.
+ */
 class GithubRepositoryDtoMapper : DomainMapper<GithubRepositoryDto, GithubRepository> {
 
     /**

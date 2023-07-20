@@ -6,30 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
-import androidx.compose.foundation.text.KeyboardActions
-import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.material.Divider
-import androidx.compose.material.Icon
-import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
-import androidx.compose.material.Text
-import androidx.compose.material.TextField
-import androidx.compose.material.TextFieldDefaults
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Search
-import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.ComposeView
-import androidx.compose.ui.platform.LocalSoftwareKeyboardController
-import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.input.ImeAction
-import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -42,6 +25,12 @@ import net.sevendays.android.code_check.presentation.components.SearchBar
 import net.sevendays.android.code_check.presentation.ui.github_repository.GithubRepositoryFragment
 
 private const val bundleKey = "githubRepo"
+
+/**
+ * Fragment that asks user input to search for repositories and displays the list of items
+ * based on api response.
+ *
+ */
 
 @AndroidEntryPoint
 class GithubRepositoryListFragment : Fragment() {
@@ -64,7 +53,7 @@ class GithubRepositoryListFragment : Fragment() {
                         color = Color.White,
                         elevation = 8.dp
                     ) {
-                       SearchBar(viewModel = viewModel)
+                        SearchBar(viewModel = viewModel)
                     }
                     LazyColumn {
                         itemsIndexed(

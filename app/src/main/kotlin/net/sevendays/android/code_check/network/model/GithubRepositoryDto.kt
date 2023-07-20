@@ -2,6 +2,10 @@ package net.sevendays.android.code_check.network.model
 
 import com.google.gson.annotations.SerializedName
 
+/**
+ * DTO Object received from the API.
+ */
+
 data class GithubRepositoryDto(
 
     @SerializedName("full_name")

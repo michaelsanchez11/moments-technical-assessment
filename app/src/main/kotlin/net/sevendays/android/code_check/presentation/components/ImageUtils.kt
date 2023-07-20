@@ -1,4 +1,4 @@
-package net.sevendays.android.code_check
+package net.sevendays.android.code_check.presentation.components
 
 import android.graphics.Bitmap
 import android.graphics.drawable.Drawable
@@ -10,6 +10,11 @@ import androidx.compose.ui.platform.LocalContext
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.target.CustomTarget
 import com.bumptech.glide.request.transition.Transition
+import net.sevendays.android.code_check.R
+
+/**
+ * Composable util for loading images and having a default image.
+ */
 
 @DrawableRes
 val defaultLoadingImage = R.drawable.loading_image

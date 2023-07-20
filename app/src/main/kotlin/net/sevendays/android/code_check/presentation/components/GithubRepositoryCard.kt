@@ -21,7 +21,10 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import net.sevendays.android.code_check.R
 import net.sevendays.android.code_check.domain.model.GithubRepository
-import net.sevendays.android.code_check.loadPicture
+
+/**
+ * Composable displaying the GithubRepository in GithubRepositoryFragment.
+ */
 
 @Composable
 fun GithubRepositoryCard(

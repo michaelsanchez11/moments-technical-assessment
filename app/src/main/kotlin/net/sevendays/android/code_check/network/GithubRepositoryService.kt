@@ -5,6 +5,10 @@ import retrofit2.http.GET
 import retrofit2.http.Headers
 import retrofit2.http.Query
 
+/**
+ * GithubRepository Service calls to our api.
+ */
+
 interface GithubRepositoryService {
 
     @Headers("Accept: application/vnd.github.v3+json")
